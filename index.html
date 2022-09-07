@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="image-section">
-            <img src="images/rob-potter-SkqIrU36Kbg-unsplash.jpg" alt="picture of white owl in a black background">
-            <div class="logo">Lab</div>
-            Photo by <a href="https://unsplash.com/@robpotter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rob Potter</a> on <a href="https://unsplash.com/t/wallpapers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        <div class="opacity-layer">
+           <div class="logo">Lab</div>
+            <div class="link">
+                Photo by <a href="https://unsplash.com/ja/@susan_wilkinson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Susan Wilkinson</a> on <a href="https://unsplash.com/s/photos/blue-aesthetic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+            </div> 
         </div>
+        
     </header>
     <main>
         <div class="sign-up-section">
@@ -24,7 +27,7 @@
             </div>
             <div class="form-container">
                 <h4>Lorem, ipsum dolor.</h4>
-                <form action="#" method="post">
+                <form class="sign-up" action="#" method="post">
                     <label for="first-name">First Name</label>
                     <input type="text" id="first-name" minlength="1" maxlength="10" required>
 
@@ -43,7 +46,7 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" minlength="6" maxlength="25" required>
 
-                    <button type="submit">Create Account</button>
+                    <button class="createAccount-btn" type="submit">Create Account</button>
                 </form>
             </div>
             <div class="log-in">
