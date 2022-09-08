@@ -46,7 +46,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 0 0 5% 5%;
+    border-radius: 0 0 8px 8px;
 }
 
 .opacity-layer {
@@ -89,6 +89,10 @@ p {
     line-height: 1.5rem;
     margin: 16px;
     font-family: 'Lato', sans-serif;
+}
+
+.intro-text {
+    width: 80%;
 }
 
 /* main css */
@@ -144,19 +148,40 @@ p {
     gap: 10px;
 }
 
+.cells {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+.input-cell {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 label {
     color: rgba(255, 255, 255, 0.366);
 }
 
 input {
     height: 30px;
+    width: 50%;
     background-color: var(--grey-color);
     color: white;
     border-width: 1px;
     border-radius: 5px;
     border-color: var(--border-color-inactive);
     transition: 0.4s;
-    
+    text-align: center;
 }
 
 input:focus {
@@ -217,4 +242,112 @@ input:valid {
     color: white;
     border-width: 2px;
     border: none;
+}
+
+/* css for landscape phones */
+
+@media only screen and (min-width: 500px) {
+    :root {
+        --header-height: 30vh;
+    }
+
+    .link {
+        top: calc(var(--header-height) - 5vh);
+    }
+
+    .intro-text {
+        width: 70%;
+    }
+
+    input {
+        width: 40%;
+    }
+
+    .createAccount-btn {
+        width: 50%;
+    }
+
+    .log-in {
+        height: 20vh;
+    }
+}
+
+/* css for tablet portrait */
+
+@media only screen and (min-height: 1080px) {
+    :root {
+        --header-height: 30vh;
+    }
+
+    header {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .link {
+        top: calc(var(--header-height) - 4vh);
+    }
+
+    .log-in {
+        height: 10vh;
+    }
+}
+
+/* css for tablet landscape */
+
+@media only screen and (min-width: 1080px) {
+    :root {
+        --header-height: 100vh;
+    }
+
+    body {
+        flex-direction: row;
+    }
+
+    header {
+        width: 70%;
+    }
+
+    p {
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .sign-up-section {
+        align-items: flex-start;
+    }
+
+    .intro-container {
+        align-items: flex-start;
+    }
+
+    .top-form {
+        align-items: flex-start;
+    }
+
+    h4 {
+        padding-left: 40px;
+    }
+
+    .cells {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
+    .input-cell {
+        width: 40%;
+        align-items: flex-start;
+    }
+
+    input {
+        width: 90%;
+        text-align: left;
+    }
+
+    .createBtnContainer {
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
 }
