@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&family=Lato&family=Poppins:wght@300;400&family=Uncial+Antiqua&display=swap');
+
 :root {
-    --header-height: 17vh;
-    --grey-color: #e4e4e4;
-    --letter-color: black;
+    --header-height: 20vh;
+    --grey-color: rgb(15, 15, 15);
+    --letter-color: rgba(255, 255, 255, 0.897);
     --border-color-inactive: rgba(0, 0, 0, 0.36);
-    --border-active: #00a6e3;
+    --border-active: #305ec4;
     --border-inValid: #fc3f3f;
     --border-valid: rgb(0, 156, 39);
 }
@@ -62,7 +64,8 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: var(--letter-color);
+    color: white;
+    font-family: 'Uncial Antiqua', cursive
 }
 
 .link {
@@ -73,11 +76,19 @@ header {
     top: calc(var(--header-height) - 3vh);
     font-size: 0.85rem;
     color: black;
+    font-family: 'Lato', sans-serif;
 }
 
 a, a:visited{
     text-decoration: none;
     color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
 /* main css */
@@ -89,6 +100,7 @@ a, a:visited{
     align-items: center;
     color: var(--letter-color);
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .intro-container {
@@ -105,11 +117,26 @@ a, a:visited{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    background-color: white;
+    background-color: var(--grey-color);
+    
+}
+
+.top-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    box-shadow: 0px 0px 2px;
+    gap: 10px;
+    background-color: rgba(25, 25, 25, 0.366);
 }
 
 .sign-up{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,13 +144,19 @@ a, a:visited{
     gap: 10px;
 }
 
+label {
+    color: rgba(255, 255, 255, 0.366);
+}
+
 input {
     height: 30px;
-    background-color: white;
-    color: black;
+    background-color: var(--grey-color);
+    color: white;
     border-width: 1px;
     border-radius: 5px;
     border-color: var(--border-color-inactive);
+    transition: 0.4s;
+    
 }
 
 input:focus {
@@ -136,19 +169,52 @@ input:valid {
     border-width: 2px;
 }
 
-input:invalid {
-    border-color: var(--border-inValid);
-    border-width: 2px;
+.createBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
 }
 
 .createAccount-btn {
-    margin-top: 25px;
+    width: 60%;
+    height: 45px;
+    background-color: var(--grey-color);
+    border-width: 1px;
+    border-radius: 5px;
+    border: none;
+    background-color: #305ec4;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+
 }
 
 .log-in {
+    height: 15vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    font-size: 0.8rem;
+}
+
+.login-btn {
+    width: 40%;
+    height: 25px;
+    background-color: var(--grey-color);
+    color: var(--border-active);
+    border-width: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: none;
+}
+
+.login-btn:hover {
+    color: white;
+    border-width: 2px;
+    border: none;
 }
