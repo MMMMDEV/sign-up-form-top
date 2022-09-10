@@ -374,9 +374,7 @@ input:valid {
         height: 100vh;
     }
 
-    main {
-        height: calc(100vh - var(--header-height));
-    }
+
 }
 
 /* desktop */
